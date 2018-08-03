@@ -20,6 +20,7 @@ To run the script, just go to the terminal and type:
 `python3 most_profit_instance.py first-exercise-input-1.txt first-exercise-input-2.txt`
 
 Carefull with project dependencies, i just use 2 modules:
+
 `import sys` --> Read the files from the script input
 
 `import re` --> Make the "grep" thing 😝

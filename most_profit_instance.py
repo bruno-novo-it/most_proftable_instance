@@ -18,12 +18,13 @@ def make_all_the_calculation():
                             memory = lines.split(',')[1]
                             cost = lines.split(',')[2]
                             #cost_benefit = (((MEMORY / m) + VCPU)/COST)
-                            cost_benefit = (((float(memory)/3.75)+float(vcpu))/float(cost))
+                            m = (3.75*float(cost))
+                            cost_benefit = (((float(memory)/float(m))+float(vcpu))/float(cost))
                             most_proftable.append([cost_benefit,instance])
 
 def most_proftable_list():
-    for line in sorted(most_proftable):
-        print(line)
+    for line in sorted(most_proftable,reverse=True):
+        print(line[1])
 
 if __name__ == "__main__":
     make_all_the_calculation()
